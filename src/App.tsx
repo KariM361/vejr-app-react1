@@ -2,19 +2,25 @@ import { useEffect, useState } from 'react'
 import style from './App.module.scss'
 import './App.css'
 
+// Hovedkomponenten for vejr-appen
 function App() {
-const vejrUrl =`https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m`
-const [vejrData, setVejrData] = useState(null)
+  // URL til Open-Meteo API for at hente vejrdata
+  const vejrUrl =`https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m`
+  // State til at gemme hentede vejrdata
+  const [vejrData, setVejrData] = useState(null)
 
 
-useEffect(()=>{
-  fetch(vejrUrl)
-  .then((res)=> res.json())
-  .then((data)=> setVejrData(data))
-}, [])
+  // useEffect til at hente vejrdata
+  useEffect(()=>{
+    fetch(vejrUrl)
+    .then((res)=> res.json())
+    .then((data)=> setVejrData(data))
+  }, [])
 
-console.log(vejrData)
 
+  console.log(vejrData)
+
+  // Bestemt indhold baseret på om vejrdata er hentet
   let content;
   if (vejrData) {
     content = (
@@ -31,6 +37,7 @@ console.log(vejrData)
     content = <p>Loading weather data...</p>;
   }
 
+  // Returnerer komponenten med vejrdata
   return (
     <>
      <main>
