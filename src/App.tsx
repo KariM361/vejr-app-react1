@@ -21,7 +21,7 @@ console.log(vejrData)
       <div className={style.vejrStyle}>
         <h2>{vejrData.current.time}</h2>
         <p>Timezone: {vejrData.timezone}</p>
-        <p>Temperature: {vejrData.current.temperature_2m}°C</p>
+        <p>Temperature: {vejrData.current.temperature_2m}C</p>
         <p>Wind Speed: {vejrData.current.wind_speed_10m} km/h</p>
         <p>Latitude: {vejrData.latitude}</p>
         <p>Longitude:{vejrData.longitude}</p>
