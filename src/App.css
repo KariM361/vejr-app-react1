@@ -1,3 +1,7 @@
+nav{
+  text-align: center;
+  
+}
 .nav-button {
   background-color: #0a2cee;
   border: none;
@@ -5,10 +9,13 @@
   margin-right: 10px;
   cursor: pointer;
   border-radius: 5px;
+  border-bottom:1px solid ;
   transition: background-color 0.3s;
   color:#ffff;
+  margin: 1rem;
 }
 
 .nav-button:hover {
   background-color: #082aa4;
 }
+

@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       {/* Navigation */}
-      <nav style={{ padding: '10px', borderBottom: '1px solid #ccc' }}>
+      <nav >
         <button className="nav-button" onClick={() => setSelectedPage('hoved')}>
           Hovedside
         </button>
