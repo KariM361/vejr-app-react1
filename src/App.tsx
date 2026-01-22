@@ -3,6 +3,7 @@ import './App.css';
 import Hovedside from './components/Hovedside';
 import Prognose from './components/Prognose';
 
+
 function App() {
   const [selectedPage, setSelectedPage] = useState<'hoved' | 'prognose'>('hoved');
 
@@ -18,8 +19,8 @@ function App() {
         </button>
       </nav>
 
-      {/* Viser den valgte side */}
-      <main style={{ padding: '20px' }}>
+      {/* Viser den valgte side, tjekker om variablen selectedPage er lig med strengen 'hoved' */}
+      <main className="mainStyle">
         {selectedPage === 'hoved' && <Hovedside />}
         {selectedPage === 'prognose' && <Prognose />}
       </main>
