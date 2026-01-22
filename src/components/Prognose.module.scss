@@ -1,0 +1,30 @@
+.container {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #0a2cee;
+  text-align: center;
+}
+//adskillelses vandret streg
+.forecastItem {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #000000;
+}
+
+.day {
+  font-weight: bold;
+  color: #0a2cee;
+}
+
+.weatherDetail {
+  margin: 5px 0;
+  color: #000000;
+}
